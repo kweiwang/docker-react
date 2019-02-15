@@ -3,9 +3,10 @@ services:
   - docker
 
 before_install:
+  - docker build -t kweiwang/docker-react-test -f Dockerfile.dev .
   - docker build -t kweiwang/docker-react -f Dockerfile.stage .
 
 scripts:
-  - docker run kweiwang/docker-react npm run test -- --coverage
-    
+  - docker run kweiwang/docker-react-test npm run test -- --coverage
+
 
