@@ -8,5 +8,3 @@ before_install:
 
 scripts:
   - docker run kweiwang/docker-react-test npm run test -- --coverage
-
-
